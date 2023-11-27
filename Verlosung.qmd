@@ -1,0 +1,63 @@
+
+---
+title: "Verlosung der 3 Gewinner*innen"
+---
+
+Im Kurs Research Methods werden im H23 die Studierenden dazu eingeladen, die [Statistik-Unterlagen](https://researchmethods-zhaw.github.io/Statistik/) weiterzuentwicklen. 
+
+
+```{r}
+#| output: false
+library(readr)
+library(tidyr)
+library(ggplot2)
+```
+
+```{r}
+pr <- read_csv("pr.csv") |>
+    janitor::clean_names() 
+
+pr <- pr |>
+    dplyr::filter(id != "#47") |>
+    separate(branch, c("user", "branch"), sep = ":")  
+
+
+stars <- read_csv("gh-stars.csv")
+
+contributions <- c(pr$user, stars$user)
+
+verlosung <- function(vec, n, pause = 1){
+    library(glue)
+    library(progress)
+    for (i in 1:n) {    
+        pb <- progress_bar$new(total = 10)
+        pb$tick(0)
+        print(glue("Gewinner #{i}:"))
+        for (j in 1:10) {
+            pb$tick()
+            Sys.sleep(pause/10)
+        }
+        sampled <- sample(vec, 1)
+        vec <- vec[vec != sampled]
+        
+        print(sampled)
+        Sys.sleep(4)
+    }    
+    print("Herzliche Gratulation!")
+}
+
+
+```
+
+
+
+```{r}
+# Der folgende seed wurde von 3 Studierenden ausgewählt
+set.seed(7+15+3)
+
+# In einer interaktiven Demo kann "pause" auf 10 gesetzt werden 
+# (erhöht die Spannung)
+verlosung(contributions, n = 3, pause = 0.1)
+
+
+```

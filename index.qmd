@@ -1,0 +1,45 @@
+---
+title: "Students4OER"
+subtitle: "Pull requests & GH-☆: Verlosung der Gewinner"
+format:
+  revealjs: 
+    theme: dark
+---
+
+
+# Die Idee:
+
+Kollaboratives weiterentickeln von Lehrunterlagen
+
+
+---
+
+
+
+Klassisch:
+
+- Lehrunterlagen werden Zentral erstellt 
+- Feedback / Korrekturvorschläge umständlich
+- → kein/wenig Feedback seitens Leserschaft
+
+
+---
+
+Mit GitHub:
+
+- Lehrunterlagen werden Zentral erstellt
+- Niederschwellige Möglichkeiten für Korrekturvorschläge
+- → 39 Pull Request, 0 Issues und 4 Stars in 4 Wochen
+
+
+# Verlosung
+
+</Verlosung.html>
+
+# Weitere Unterlagen
+
+- Arbeiten mit Markdown an der ZHAW: <https://fit-mit-markdown.github.io/>
+- Kurs "Patterns & Trends in Environmental Data" <https://computationalmovementanalysis.github.io/>
+
+
+
