@@ -34,7 +34,7 @@ Mit GitHub:
 
 # Verlosung
 
-</Verlosung.html>
+[Verlosung in Quarto](/Verlosung.html)
 
 # Weitere Unterlagen
 
