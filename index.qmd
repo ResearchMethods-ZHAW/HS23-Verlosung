@@ -34,7 +34,7 @@ Mit GitHub:
 
 # Verlosung
 
-[Verlosung in Quarto](/Verlosung.html)
+Link zur Reproduzierbaren Verlosung in Quarto: [Verlosung.qmd](HS23-Verlosung/Verlosung.html){target="_blank"}
 
 # Weitere Unterlagen
 

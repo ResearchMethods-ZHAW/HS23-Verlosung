@@ -19,14 +19,9 @@ stars <- read_csv("gh-stars.csv")
 ```
 
 ```{r}
-
-
 pr <- pr |>
     dplyr::filter(id != "#47") |>
     separate(branch, c("user", "branch"), sep = ":")  
-
-
-
 
 contributions <- c(pr$user, stars$user)
 
@@ -62,6 +57,5 @@ set.seed(7+15+3)
 # In einer interaktiven Demo kann "pause" auf 10 gesetzt werden 
 # (erhöht die Spannung)
 verlosung(contributions, n = 3, pause = 0.1)
-
 
 ```
