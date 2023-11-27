@@ -11,18 +11,22 @@ Im Kurs Research Methods werden im H23 die Studierenden dazu eingeladen, die [St
 library(readr)
 library(tidyr)
 library(ggplot2)
+
+pr <- read_csv("pr.csv") |>
+    janitor::clean_names() 
+
+stars <- read_csv("gh-stars.csv")
 ```
 
 ```{r}
-pr <- read_csv("pr.csv") |>
-    janitor::clean_names() 
+
 
 pr <- pr |>
     dplyr::filter(id != "#47") |>
     separate(branch, c("user", "branch"), sep = ":")  
 
 
-stars <- read_csv("gh-stars.csv")
+
 
 contributions <- c(pr$user, stars$user)
 
